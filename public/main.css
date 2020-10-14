@@ -1,0 +1,50 @@
+body {
+    background-color: rgb(247, 206, 242);
+    height: 100vh;
+    width: 100%;
+    font-family: 'Audiowide', cursive;
+    padding: 30px;
+    margin-top: 30px;
+  }
+  
+  .app{
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+  input {
+      width: 260px;
+      height: 40px;
+      margin-right: 10px;
+      border-radius: 5px;
+      padding-left: 16px;
+      border: none;
+      font-family: 'Audiowide', cursive;
+    }
+    button {
+      width: 80px;
+      height: 40px;
+      border-radius: 5px;
+      border: none;
+      font-family: 'Audiowide', cursive;
+    }
+  .heading{
+      text-align: center;
+  } 
+  .img-div{
+      height: 120px;
+      background-color: rgb(201, 231, 236);
+      border-radius: 60%;
+  } 
+  img{
+      height: 100%;
+  }
+  .lnd-img{
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }

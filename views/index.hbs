@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      {{!-- <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@200;700&display=swap" rel="stylesheet"> --}}
+      <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/main.css">
+
+    <title>Weather Forecast</title>
+</head>
+<body>
+   <nav class="navbar navbar-light" style="background-color: #8c8e8e22;">
+
+      <a href="forecast">London 7 Days</a>
+    </nav>
+<div class="app">
+    <img src="/images/weather-app.png" alt="bdg">
+    <h2>Choose a City and Enter its country code</h2>
+    
+    <form action="/" method='POST'>
+        <input type="text" placeholder="Enter City" name='theCity'>
+        <input type="text" placeholder="Enter Country code" name='theCountry'>
+        <button type="submit">Submit</button>
+    </form>
+   {{#if tempC}}
+    <h2 >Current Weather in <span style="text-transform: uppercase;"> {{cityName}}</span> </h2>
+     <h2>Temperature: {{tempC}} ºC</h2>
+     <h3> Description: <span style="text-transform: uppercase;">{{weatherDisc}}</span> </h3>
+    <div class="img-div">
+      <img  src={{srcLogo}} alt='logo' class="img-fluid" alt="Responsive image">
+    </div>
+  {{/if}}
+  {{#if msg}}
+      <h1>{{msg}}</h1>
+      <img src={{srcLogo}} alt="logo">
+    {{/if}}
+ </div>
+</body>
+</html>

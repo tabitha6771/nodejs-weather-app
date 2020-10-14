@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      {{!-- <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@200;700&display=swap" rel="stylesheet"> --}}
+      <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/main.css">
+
+    <title>Weather Forecast</title>
+</head>
+<body>
+  <nav class="navbar navbar-light" style="background-color: #8c8e8e22;">
+        <a href="/">City weather</a>
+    </nav>
+    <div class="lnd-img">
+  <img src="/images/london.png" alt="bdg">
+  </div>
+ <h1 class="heading">London Weather Forecast</h1>
+  {{!-- <div class='all-div'>
+       <div>
+        {{#each   dates}}
+            <p>{{this}}</p>
+        {{/each}}
+     </div> --}}
+      
+       {{!-- <div>
+        {{#each  dataArray}}
+            <p>{{this.temp.day}} ºC</p>
+        {{/each}}
+        </div>
+        <div>
+         {{#each  desc}}
+            <p>{{this}} </p>
+        {{/each}}
+        </div>
+    
+     <div class="img-src">
+       {{#each  src}}
+            <img src={{this}} alt="icon">
+        {{/each}}
+     </div>
+  </div> --}}
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+          <th>#</th>
+        <th>DAY 1</th>
+        <th>DAY 2</th>
+        <th>DAY 3</th>
+        <th>DAY 4</th>
+        <th>DAY 5</th>
+        <th>DAY 6</th>
+        <th>DAY 7</th>
+        <th>DAY 8</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Date</td>
+        {{#each   dates}}
+            <td>{{this}}</td>
+        {{/each}}
+        </tr>
+        <tr>
+         <td>Temperature</td>
+        {{#each  dataArray}}
+            <td>{{this.temp.day}} ºC</td>
+        {{/each}}
+        </tr>
+         <tr>
+         <td>Description</td>
+        {{#each  desc}}
+            <td>{{this}} </td>
+        {{/each}}
+        </tr>
+         <tr>
+         <td>MIN/MAX</td>
+        {{#each  minMax}}
+            <td>{{this}} </td>
+        {{/each}}
+        </tr>
+        <tr>
+         <td>Icon</td>
+        {{#each  src}}
+            <td><img src={{this}} alt="icon" class="img-fluid" alt="Responsive image"> </td>
+        {{/each}}
+        </tr>
+    </tbody>
+  </table>
+</body>
+</html>
